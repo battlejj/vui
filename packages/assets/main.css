@@ -1,0 +1,56 @@
+body {
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-size: 16px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  text-align: center;
+  outline: 0px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0px;
+  text-decoration: none;
+  flex: 0 0 auto;
+}
+
+:root {
+  --vui-palette-primary--main: #1976d2;
+  --vui-palette-secondary--main: #9c27b0;
+  --vui-palette-error--main: #ca2807;
+}
+
+:root {
+  --IconButton-hoverBg: rgba(255 255 255 / calc(0.08));
+  --IconButton-hoverBg--ripple: rgba(255 255 255 / calc(0.1));
+  --IconButton-activeBg: rgba(255 255 255 / calc(0.08));
+}
+
+/* Ripple effect */
+.VuiButton-ripple {
+  background-position: center;
+  transition: background 0.3s;
+}
+
+.VuiButton-ripple:hover {
+  background: var(--IconButton-hoverBg)
+    radial-gradient(circle, transparent 1%, var(--IconButton-hoverBg) 1%) center/15000%;
+}
+
+.VuiButton-ripple:active {
+  background-color: var(--IconButton-hoverBg--ripple);
+  background-size: 100%;
+  transition: background 0s;
+}
